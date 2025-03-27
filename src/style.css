@@ -1,0 +1,159 @@
+:root {
+  --gutter: 16px;
+  --border-radius: calc(var(--gutter)/4)
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  height: 100vh;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Side Panel */
+#side-panel {
+  color: white;
+  background: url('/backgndphoto.png') no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  width: 400px;
+
+  a {
+    color: white;
+  }
+}
+
+.logo-space-box {
+  display: flex;
+  height: 250px;
+  align-items: end;
+}
+
+#logo-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  font-size: 4rem;
+  font-family: 'Metal Mania', cursive;
+  padding: var(--gutter);
+  justify-content: center;
+  flex: 1;
+
+  img {
+    max-height: 100px;
+  }
+}
+
+/* Main Panel */
+#main-panel {
+  flex: 1;
+  background-color: #F9FAFB;
+
+  .main-panel-box {
+    padding: calc(var(--gutter) * 2);
+
+    p {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    button {
+      color: white;
+      background-color: #596D48;
+      border-radius: 5px;
+      border: none;
+      box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 4px;
+      padding: 10px 40px;
+
+    }
+  }
+
+  .main-panel-box:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 250px;
+
+    p:first-child {
+      margin-top: 0;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .main-panel-box:last-child {
+    p {
+      font-size: 1.2rem;
+      font-weight: normal;
+
+      a,
+      a:visited {
+        color: #596D48;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+#create-account-form {
+  background-color: white;
+  padding: calc(var(--gutter) * 2);
+  box-shadow: #bbb 0 2px 4px;
+
+  .row {
+    max-width: 480px;
+
+  }
+
+  label {
+    color: #9DA1A7;
+    font-size: 0.8rem;
+
+  }
+
+  input {
+    border: 1px solid #E5E7EB;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+  }
+
+  input:invalid {
+    border-color: red;
+  }
+
+
+  input:focus {
+    border-color: blue;
+    box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 4px;
+    outline: none;
+
+  }
+}
+
+
+.row {
+  display: flex;
+  gap: calc(var(--gutter) * 4);
+
+
+  >.col {
+    flex: 1
+  }
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
